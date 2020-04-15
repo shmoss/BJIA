@@ -35,7 +35,9 @@ p {
 }
 
 .d-block.w-100 {
-    transform: scale(0.4);
+    transform: scale(1);
+    border:1px solid black;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75)
 }
 
 .fa-links {
