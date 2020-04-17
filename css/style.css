@@ -1,37 +1,55 @@
 body {
   font-family: Lato;
-  color:#042F59;
+  color:#2a4f6c;
 }
 
 head {
   font-family: Lato;
-  color:#042F59;
+  color:#2a4f6c;
 }
 
-h1,h2,h3 {
+h1,h2,h3,a {
     font-family:Lato;
-    color:#042F59;
+    color:#2a4f6c;
+    letter-spacing: 1.5px;
 }
 
 p {
-    letter-spacing: 1.4px;
-    color:#042F59;
+    letter-spacing: 1.5px;
+    color:#2a4f6c;
 }
 
 *ul li:before {
     list-style-type: none!important
 }
 
+.footer{
+    height:40px;
+}
+
 .thumbnail.tile.tile-medium {
     border:none;
-    transform: scale(0.6);
-    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-    background-color: #042F59;
+    transform: scale(0.7);
+    background-color: transparent;
+    height:70px;
+    width:130px;
+    padding:0px;
 
 }
 
 .bjia-image {
-    opacity:.9
+    opacity:.9;
+    vertical-align:center;
+    
+}
+
+.text{
+
+    position:relative;
+    vertical-align:center;
+    top: 24px;
+    padding-bottom:20px;
+    padding:top:0px;
 }
 
 .d-block.w-100 {
@@ -47,8 +65,23 @@ p {
 .tileHeading {
     font-size:28px !important;
 
+}
+
+.tileHeading.active {
+  background-color: red 
+}
 
 
+
+#linkHome.active{
+    background-color: red 
+}
+
+
+
+
+.local-link {
+  background-color: transparent; ;
 }
 
 .wrapper {
@@ -59,27 +92,47 @@ p {
    
 }
 
+.topic-subnav{
+    color:#4667b2;
+}
+
 #programTileHeading{
    border:none;
-    transform: scale(.9);
+
+    transform: scale(.8);
+    padding:none;
     box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-    background-color: #042F59
+    background-color: #2a4f6c;
+    height:120px;
+    pointer-events:none;
+}
+
+#programsText.tileHeading{
+    font-size:20px !important;
 }
 
 .programRow{
    margin-top: 30px;
-   background-color: rgba(4, 47, 89, 0.1);
+   background-color: rgba(54, 98, 127, 0.1);
+   padding:20px 20px 20px 20px
+}
+
+.aboutRow{
+   margin-top: 30px;
+   background-color: rgba(54, 98, 127, 0.07);
    padding:20px 20px 20px 20px
 }
 
 .overview {
     padding-top:15px;
-    padding-bottom:15px;
+    padding-bottom:25px;
 }
 
 .navbar {
     margin-bottom:0px;
-    background-color: #042F59
+    background-color: #4667b2;
+    
+    max-height:355px;
   
 }
 
@@ -97,10 +150,12 @@ p {
 
 }
 
-
+.footerBox{
+    padding-top:0px;
+}
 
 .container-fluid {
-
+background-image: linear-gradient(to right, #4682b2,#25445e);
 }
 
 .navbar-nav.navText {
@@ -141,11 +196,11 @@ p {
     background-color:white;
 }
 
-.col-sm-6.col-md-3 {
-    padding-bottom:0px;
-    height:100px
-
+.tableauPlaceholder{
+max-width:1000px;
 }
+
+
 
 #navText li {
 list-style-type: none!important
