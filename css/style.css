@@ -221,3 +221,11 @@ li::before{
     list-style-type: none;
 }
 
+
+@media only screen and (max-width:980px) {
+  .col-md-4 {
+    background-color:red;
+    float:left !important;
+    text-align:left !important;
+  }
+}
