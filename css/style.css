@@ -34,7 +34,7 @@ p {
     height:70px;
     width:130px;
     padding:0px;
-    float:right;
+    
 
 }
 
@@ -226,17 +226,6 @@ li::before{
 .col-md-4 {
     padding:0px;
     margin-left:0px;
-}
-.navbar-collapse.collapse.in {
-  display: block!important;
-}
-
-.navbar-toggle.collapsed{
-    float:right;
-}
-
-.navbar-toggle{
-    float:right;
 }
 
 
