@@ -62,14 +62,14 @@
                     </div>
                 <div class="thumbnail tile tile-medium tile-green">
                     <a href="programs.html" class="fa-links">
-                    <h1 class="tileHeading">PROGRAMS</h1>
+                    <h1 class="tileHeading" >PROGRAMS</h1>
                     <i class="fas fa-sitemap fa-lg"></i>
                     </a>
                     </div>
                 <div class="thumbnail tile tile-medium tile-orange">
                     <a href="data.html" class="fa-links">
-                    <h1 class="tileHeading">DATA</h1>
-                    <i class="fas fa-database fa-lg"></i>
+                    <h1 class="tileHeading"style='color:#05E9FF'>DATA</h1>
+                    <i class="fas fa-database fa-lg"style='color:#05E9FF'></i>
                     </a>
                     </div>
         </div>
@@ -115,7 +115,8 @@
     <div class="subnav banner">
             <div class="container">
                 <nav class="topic-subnav" role="navigation">
-                    <ul id="menu-food-2" class="nav navbar-nav"><li class="active menu-updates"><a href="#CORE" aria-current="page">CORE</a></li>
+                    <ul id="menu-food-2" class="nav navbar-nav">
+                    <li class="active menu-updates"><a href="#CORE" aria-current="page"><strong>UCR</strong><br>Uniform Crime Reporting</a></li>
                     <li class="menu-data"><a href="#DAR" class="local-link">DAR</a></li>
                     <li class="menu-apps"><a href="/food/page/food-apps">OFR</a></li>
                     <li class="menu-developer"><a target="_blank" rel="noopener noreferrer external" href="http://usda.gov/wps/portal/usda/usdahome?navid=USDA_DEVELOPER" class="external ext-link" onclick="this.target=&#039;_blank&#039;;">SAKI</a></li>
@@ -126,17 +127,17 @@
         </div>
     </div>
 
-   <div class='container'>
+   <div class='container' id ='containerContent'>
         <div class='programContainer'  >
             
             <div class='col-md-8' >
-              <div class="programRow">
+              <div class="programRow" id="programRow1">
               <a id="CORE" ></a> 
 
                 <h3> <strong>Comprehensive Outcome, Research and Evaluation</strong></h3>
 
                 <br>
-                <p>
+                <p id='programContent'>
                 The CORE Reporting System is designed to collect participant-level data for treatment court and diversion programs in the State of Wisconsin. The data can be utilized for performance measurement, evaluation, and tracking of participant progress through various programs. This is a secure site intended for authorized users at the state and local level.
                 </p>
 
@@ -147,69 +148,46 @@
             </div>
 
             <div class="programRow">
-              <a id="DAR" ></a> 
-
-                <h3> <strong>DAR</strong></h3>
-
-                <br>
-                <p>
-                The CORE Reporting System is designed to collect participant-level data for treatment court and diversion programs in the State of Wisconsin. The data can be utilized for performance measurement, evaluation, and tracking of participant progress through various programs. This is a secure site intended for authorized users at the state and local level.
-                </p>
-
-                <p>
-                The BJIA also serves as the Statistical Analysis Center (SAC) for the State of Wisconsin and contributes directly to the ability of the Department of Justice to provide research results that aid in decision making for criminal justice programs and policies.  The BJIA provides additional program information, including data publications and UCR forms and manuals on the Department’s Law Enforcement website  <a href = "https://wilenet.org/html/justice-programs/programs/justice-stats/index.htm/" target="_blank">wilenet.org</a>.
-                </p>
+              
               
             </div>
 
           </div>
-
             </div>
 
             <div class="container">
               <div class='col-md-4' >
-                <div class='col-md-12'>
+               
+                  <div class='programRow' style='background-color:transparent;'> 
                   <h3 >
-                    <strong>Browse Topics</strong>
+                    <strong>Browse Data</strong>
                   </h3>
-                  <div class=row> 
-                    <div class="col-sm-6 col-md-3">
-                    <div class="thumbnail tile tile-medium tile-green">
-                    <a href="#" class="fa-links">
-                    <h1 class="tileHeading">ABOUT</h1>
-                    <i class="fas fa-info-circle fa-lg"></i>
-                    </a>
-                    </div>
-                    </div>     
-                  </div>
-                  <div class=row> 
-                    <div class="col-sm-6 col-md-3">
-                    <div class="thumbnail tile tile-medium tile-green">
-                    <a href="#" class="fa-links">
-                    <h1 class="tileHeading">PROGRAMS</h1>
-                    <i class="fas fa-sitemap fa-lg"></i>
-                    </a>
-                    </div>
-                    </div>    
-                  </div>
-                  <div class=row> 
-                    <div class="col-sm-6 col-md-3">
-                    <div class="thumbnail tile tile-medium tile-orange">
-                    <a href="#" class="fa-links">
-                    <h1 class="tileHeading">DATA</h1>
-                    <i class="fas fa-database fa-lg"></i>
-                    </a>
-                    </div>
-                </div>   
-                  </div>
-                </div>
+                  
 
+                    <ul class="nav flex-column">
+                      <li class="nav-item" >
+                      <a class="nav-link active" id="coreNav" href="#programContent"><strong>CORE</strong><br>Comprehensive Outcome, Research and Evaluation</a>
+                      </li>
+                      <li class="nav-item" id="darNav">
+                      <a class="nav-link" href="#programContent"><strong>DAR</strong></a>
+                      </li>
+                      <li class="nav-item" id="ofrNav">
+                      <a class="nav-link" href="#programContent"><strong>OFR</strong><br>Overdose Fatality Review</a>
+                      </li>
+                      <li class="nav-item" id="sakiNav">
+                      <a class="nav-link disabled" href="#programContent"><strong>SAKI</strong></a>
+                      </li>
+                      <li class="nav-item" id="tadNav">
+                      <a class="nav-link disabled" href="#programContent"><strong>TAD</strong></a>
+                      </li>
+                    </ul>
+                
+  
+                  </div>
+                  
+                </div>
             </div>        
         </div>
-
-
-
-<div class='tableauPlaceholder' id='viz1587071776002' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;KW&#47;KWZN674JB&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;KWZN674JB' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;KW&#47;KWZN674JB&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='tabs' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1587071776002');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='850px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
     
 
 
@@ -229,16 +207,6 @@
 
 
 
-  <h2>Contact Us</h2>
-                <ul style="list-style-type: square; margin-left:25px">
-                  <li style="padding-bottom:10px">
-                    <a href= "mailto: statsanalysis@doj.state.wi.us" target="_blank">Email</a>
-                  </li>
-                  
-                  <li style="padding-bottom:10px">
-                    608-266-0605
-                  </li>
-              </ul>
 
 
 </div>
