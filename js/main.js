@@ -5,7 +5,7 @@ $('.carousel').carousel({
 
 
 
-
+//Set content for programs
 
 var coreHTML = '<div class="content">' +
                         '<h3> <strong>Comprehensive Outcome, Research and Evaluation</strong></h3>' +
@@ -46,6 +46,8 @@ var tadHTML = '<div class="content">' +
                     '</div>';
 
 
+
+//Set event listeners for programs
 
 $(document).ready(function(){ 
   $('#coreNav').on('click', function(e) {
@@ -96,3 +98,38 @@ $(document).ready(function(){
 
 
 
+//Set content for data
+
+var ucrArrestDataHTML = '<div class="tableauPlaceholder" id="viz1587396794613" style="position: relative">' +
+						'<noscript>' +
+						'<a href="https:&#47;&#47;www.doj.state.wi.us&#47;dles&#47;bjia&#47;ucr-arrest-data"><img alt="" src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;UC&#47;UCRArrests&#47;DataNotesReadMe&#47;1_rss.png" style="border: none" /></a>' +
+        				'<noscript>' +
+        				'<object class="tableauViz"  style="display:none;"><param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" /> <param name="embed_code_version" value="3" /> <param name="site_root" value=" " /><param name="name" value="UCRArrests&#47;DataNotesReadMe" /><param name="tabs" value="yes" /><param name="toolbar" value="yes" /><param name="static_image" value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;UC&#47;UCRArrests&#47;DataNotesReadMe&#47;1.png" /> <param name="animate_transition" value="yes" /><param name="display_static_image" value="yes" /><param name="display_spinner" value="yes" /><param name="display_overlay" value="yes" /><param name="display_count" value="yes" /></object>'+
+        				'</div> ' +
+        				'<script type="text/javascript">                    var divElement = document.getElementById("viz1587396794613");                    var vizElement = divElement.getElementsByTagName("object")[0];                    vizElement.style.width="1000px";vizElement.style.height="850px";                    var scriptElement = document.createElement("script");                    scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js;                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>'
+                        
+
+
+
+
+var ucr = '<div class="tableauPlaceholder" id="viz1587396794613" style="position: relative"><noscript><a href="https:&#47;&#47;www.doj.state.wi.us&#47;dles&#47;bjia&#47;ucr-arrest-data"><img alt=" " src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;UC&#47;UCRArrests&#47;DataNotesReadMe&#47;1_rss.png" style="border: none" /></a></noscript><object class="tableauViz"  style="display:none;"><param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" /> <param name="embed_code_version" value="3" /> <param name="site_root" value="" /><param name="name" value="UCRArrests&#47;DataNotesReadMe" /><param name="tabs" value="yes" /><param name="toolbar" value="yes" /><param name="static_image" value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;UC&#47;UCRArrests&#47;DataNotesReadMe&#47;1.png" /> <param name="animate_transition" value="yes" /><param name="display_static_image" value="yes" /><param name="display_spinner" value="yes" /><param name="display_overlay" value="yes" /><param name="display_count" value="yes" /></object></div>                <script type="text/javascript">                    var divElement = document.getElementById("viz1587396794613");                    var vizElement = divElement.getElementsByTagName("object")[0];                    vizElement.style.width="1000px";vizElement.style.height="850px";                    var scriptElement = document.createElement("script");                    scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>'
+
+
+
+var myvar = '<div class=\'tableauPlaceholder\' id=\'viz1587399162124\' style=\'position: relative\'><noscript><a href=\'https://www.doj.state.wi.us/dles/bjia/ucr-sex-offense-data\'><img alt=\' \' src=\'https://public.tableau.com/static/images/UC/UCRSexOffenseData-TabVersion/OffenseRates/1_rss.png\' style=\'border: none\' /></a></noscript><object class=\'tableauViz\'  style=\'display:none;\'><param name=\'host_url\' value=\'https%3A%2F%2Fpublic.tableau.com%2F\' /> <param name=\'embed_code_version\' value=\'3\' /> <param name=\'site_root\' value=\'\' /><param name=\'name\' value=\'UCRSexOffenseData-TabVersion/OffenseRates\' /><param name=\'tabs\' value=\'yes\' /><param name=\'toolbar\' value=\'yes\' /><param name=\'static_image\' value=\'https://public.tableau.com/static/images/UC/UCRSexOffenseData-TabVersion/OffenseRates/1.png\' /> <param name=\'animate_transition\' value=\'yes\' /><param name=\'display_static_image\' value=\'yes\' /><param name=\'display_spinner\' value=\'yes\' /><param name=\'display_overlay\' value=\'yes\' /><param name=\'display_count\' value=\'yes\' /></object></div>                <script type=\'text/javascript\'>                    var divElement = document.getElementById(\'viz1587399162124\');                    var vizElement = divElement.getElementsByTagName(\'object\')[0];                    vizElement.style.width=\'1000px\';vizElement.style.height=\'850px\';                    var scriptElement = document.createElement(\'script\');                    scriptElement.src = \'https://public.tableau.com/javascripts/api/viz_v1.js\';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>';
+	
+
+
+
+
+
+
+$(document).ready(function(){ 
+  $('#ucrArrestData').on('click', function(e) {
+  	console.log("poopy")
+
+    // Prevent the page from reloading
+  
+	document.getElementById("containerContent").innerHTML = myvar
+  });
+});
