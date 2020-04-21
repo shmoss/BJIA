@@ -122,7 +122,7 @@ var myvar = '<div class=\'tableauPlaceholder\' id=\'viz1587399162124\' style=\'p
 
 
 
-
+/*
 
 $(document).ready(function(){ 
   $('#ucrArrestData').on('click', function(e) {
@@ -133,3 +133,6 @@ $(document).ready(function(){
 	document.getElementById("containerContent").innerHTML = myvar
   });
 });
+*/
+
+
