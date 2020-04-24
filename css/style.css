@@ -600,12 +600,21 @@ li::before{
 
 .col-lg-3.col-md-6.mb-lg-0.mb-5 {
    
-     padding-bottom:65px;
+     padding-bottom:35px;
 
 
 }
 
 .grey-text{
+color:white;
 padding-left:10px;
 padding-right:10px;
+font-size:12px;
+}
+
+.col-lg-3.col-md-6.mb-lg-0.mb-5:hover .grey-text{
+color:#2a4f6c;
+padding-left:10px;
+padding-right:10px;
+font-size:12px;
 }
