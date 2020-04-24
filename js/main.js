@@ -4,6 +4,17 @@ $('.carousel').carousel({
 
 
 
+$(document).ready(function(){ 
+
+    console.log('hover')
+   var activeNavItem = $('.thumbnail.tile.tile-medium.tile-purple.col-md-3')
+
+  activeNavItem.click(function(){
+  activeNavItem.removeClass('active');
+  $(this).addClass('active')
+  });
+});
+
 
 //Set content for programs
 
