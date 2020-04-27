@@ -625,10 +625,7 @@ li::before{
 }
 
 .grey-text{
-color:white;
-padding-left:10px;
-padding-right:10px;
-font-size:12px;
+
 }
 
 .col-md-6:hover .grey-text{
@@ -640,7 +637,7 @@ font-size:12px;
 
 
 .bioBody{
-
+    transform:scale(0);
     width:0px;
     height:0px;
 }
@@ -653,4 +650,5 @@ font-size:12px;
     display:inline-block;
     background-color: red;
     width:80%;
+    transform:scale(.9);
 }
