@@ -645,9 +645,12 @@ font-size:12px;
     height:0px;
 }
 
+.col-md-6{
+    padding-bottom:10px;
+}
 
 .col-md-6:hover .bioBody{
     display:inline-block;
     background-color: red;
-   width:400px;
+    width:80%;
 }
