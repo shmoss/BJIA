@@ -2,6 +2,7 @@ body {
   font-family: Lato;
   color:#2a4f6c;
   min-height:1px;
+
 }
 
 head {
@@ -9,15 +10,27 @@ head {
   color:#2a4f6c;
 }
 
-h1,h2,h3,a {
+h1,h2,h3 {
     font-family:Lato;
     color:#2a4f6c;
     letter-spacing: 1.4px;
+    font-size: 1.3em
 }
 
 p {
     letter-spacing: 1.4px;
     color:#2a4f6c;
+    font-size: 1em
+
+
+}
+
+a {
+    letter-spacing: 1.4px;
+    color:#2a4f6c;
+    font-size: 1em
+
+
 }
 
 *ul li:before {
@@ -32,7 +45,11 @@ svg{
     margin-top:10px;
     margin-bottom:10px;
     font-family:'Lato';
-    font-size:22px;
+    font-size:1.3em;
+}
+
+.nav > li > a:hover, .nav > li > a:focus{
+   background-color: rgba(4, 47, 89, 0.1) !important;
 }
 
 #dataHeader{
@@ -174,7 +191,7 @@ svg{
 }
 
 .tileHeading {
-    font-size:28px !important;
+    font-size:1em !important;
     transform: scale(0.7);
 
 }
@@ -405,7 +422,7 @@ max-width:1000px;
    padding:0px !important;
     margin-top:120px;
     max-width:250px;
-    font-size:24px !important;
+    font-size:1.7em !important;
     display: block;
     display: -webkit-box;
     letter-spacing: 1.5px;
@@ -512,6 +529,8 @@ li::before{
     margin-left:0px;
 }
 
+
+
 .dropbtn {
   background-color: #4CAF50;
   color: white;
@@ -600,7 +619,7 @@ li::before{
 
 .col-lg-3.col-md-6.mb-lg-0.mb-5 {
    
-     padding-bottom:35px;
+     padding-bottom:0px;
 
 
 }
