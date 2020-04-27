@@ -622,7 +622,6 @@ li::before{
      padding-bottom:0px;
 
 
-
 }
 
 .grey-text{
@@ -632,16 +631,23 @@ padding-right:10px;
 font-size:12px;
 }
 
-.testy{}
-
-.col-lg-3.col-md-6.mb-lg-0.mb-5:hover .grey-text{
+.col-md-6:hover .grey-text{
 color:#2a4f6c;
 padding-left:10px;
 padding-right:10px;
 font-size:12px;
 }
 
-.col-lg-3.col-md-6.mb-lg-0.mb-5:hover {
+
+.bioBody{
+
+    width:0px;
+    height:0px;
+}
 
 
+.col-md-6:hover .bioBody{
+    display:inline-block;
+    background-color: red;
+   width:400px;
 }
