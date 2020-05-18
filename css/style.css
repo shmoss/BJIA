@@ -10,6 +10,10 @@ head {
   color:#2a4f6c;
 }
 
+footer{
+
+}
+
 h1,h2,h3 {
     font-family:Lato;
     color:#2a4f6c;
@@ -41,7 +45,7 @@ svg{
     vertical-align: middle
 }
 .page-header{
-    border-bottom:1.5px solid #2a4f6c;
+    border-bottom:.5px solid #2a4f6c;
     margin-top:10px;
     margin-bottom:10px;
     font-family:'Lato';
@@ -64,8 +68,14 @@ svg{
 }
 
 
-.footer{
-    height:40px;
+.footerContent{
+    font-weight:100;
+}
+
+
+#block-block-4{
+    padding-top:20px;
+    padding-bottom:10px;
 }
 
 .thumbnail.tile.tile-medium.tile-green {
@@ -628,12 +638,7 @@ li::before{
 
 }
 
-.col-md-6:hover .grey-text{
-color:#2a4f6c;
-padding-left:10px;
-padding-right:10px;
-font-size:12px;
-}
+
 
 
 .bioBody{

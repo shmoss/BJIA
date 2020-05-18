@@ -1,5 +1,5 @@
 $('.carousel').carousel({
-  interval: 2000
+  interval: 45000
 })
 
 
@@ -9,7 +9,7 @@ $(document).ready(function(){
     console.log('hover')
    var activeNavItem = $('.thumbnail.tile.tile-medium.tile-purple.col-md-3')
 
-  activeNavItem.click(function(){
+  activeNavItem.hover(function(){
   activeNavItem.removeClass('active');
   $(this).addClass('active')
   });
