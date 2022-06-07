@@ -1,149 +1,226 @@
-$('.carousel').carousel({
-  interval: 5000
-})
 
 
 
 $(document).ready(function(){ 
 
-    console.log('hover')
-   var activeNavItem = $('.thumbnail.tile.tile-medium.tile-purple.col-md-3')
 
-  activeNavItem.hover(function(){
-  activeNavItem.removeClass('active');
-  $(this).addClass('active')
-  });
+
+	console.log("changin")
+	//console.log($('#categoryDropdown').val())
+	//const displayVal = localStorage.getItem('disp');
+	//console.log(displayVal)
+	//const displayCategory = localStorage.getItem('categoryValue');
+	//console.log(displayCategory)
+    var category = $('#categoryDropdown').val().toLowerCase(),
+    format = $('#formatDropdown').val().toLowerCase();
+
+  var table = $("#download-forms-table-tbody");
+  var trs = table.find('tr');
+  trs.hide();
+
+  var filtered = trs.filter(function(index, elem) {
+    var tds_category = $(elem).find('td > div:nth-of-type(3)'); //get the category
+	var tds_format = $(elem).find('td > div:nth-of-type(4)'); //get the format
+	var all_tds = $(elem).find('td'); //get all td
+	//console.log(tds.text())
+	console.log(tds_format.text())
+	//console.log(tds.eq(1).innerHTML)
+    if (category !== "all" && tds_category.text().trim().toLowerCase() !== category) {
+      return false;
+    }
+    if (format !== "all" && tds_format.text().trim().toLowerCase() !== format) {
+      return false;
+    }
+
+    return true;
+  })
+
+  filtered.show();
+
+  if (filtered.length == 0) {
+    alert("No Records Found!!!");
+  }
+
+
+console.log("HI")
+
+
+var selection 
+// $('#human-trafficking').click(function(){
+	// console.log("clicking human trafficking")
+    // //$('#categoryDropdown').val('Category: Use of Force');
+	// selection = "Category: Human Trafficking"
+	// console.log(selection)
+	// localStorage.setItem("selection",'Category: Human Trafficking'); location="research.html"; 
+	// if (selection == "Category: Human Trafficking") {
+		// console.log("selection is Human Trafficking")
+		 // $('#categoryDropdown').val('Category: Human Trafficking');
+		// }
+	// //return selection
+// })
+
+//console.log(selection)
+
+var categoryValue 
+
+//($('#categoryDropdown').val('Category: Drug and Overdose Data'))
+
+
+
+ 
+
+$('.container').on("change", 'select', function() {
+
+  var category = $('#categoryDropdown').val().toLowerCase(),
+    format = $('#formatDropdown').val().toLowerCase();
+
+  var table = $("#download-forms-table-tbody");
+  var trs = table.find('tr');
+  trs.hide();
+
+  var filtered = trs.filter(function(index, elem) {
+    var tds_category = $(elem).find('td > div:nth-of-type(3)'); //get the category
+	var tds_format = $(elem).find('td > div:nth-of-type(4)'); //get the format
+	var all_tds = $(elem).find('td'); //get all td
+	//console.log(tds.text())
+	console.log(tds_format.text())
+	//console.log(tds.eq(1).innerHTML)
+    if (category !== "all" && tds_category.text().trim().toLowerCase() !== category) {
+      return false;
+    }
+    if (format !== "all" && tds_format.text().trim().toLowerCase() !== format) {
+      return false;
+    }
+    return true;
+  })
+
+  filtered.show();
+
+  if (filtered.length == 0) {
+    alert("No Records Found!!!");
+  }
+
 });
 
 
-//Set content for programs
+//get value of dropdown based on user selection in homepage
+var get_category_val = $('#categoryDropdown').val().toLowerCase()
+console.log(get_category_val)
 
-var coreHTML = '<div class="content">' +
-                        '<h3> <strong>Comprehensive Outcome, Research and Evaluation</strong></h3>' +
-                        '<br>'+
-                        '<p> The CORE Reporting System is designed to collect participant-level data for treatment court and diversion programs in the State of Wisconsin. The data can be utilized for performance measurement, evaluation, and tracking of participant progress through various programs. This is a secure site intended for authorized users at the state and local level.</p>' +
-                        '<p>The BJIA also serves as the Statistical Analysis Center (SAC) for the State of Wisconsin and contributes directly to the ability of the Department of Justice to provide research results that aid in decision making for criminal justice programs and policies.  The BJIA provides additional program information, including data publications and UCR forms and manuals on the Department’s Law Enforcement website  <a href = "https://wilenet.org/html/justice-programs/programs/justice-stats/index.htm/" target="_blank">wilenet.org</a>.' +
-                    '</div>';
+if (get_category_val == "category: arrest data") {
+	document.getElementById("arrestData").checked = true;
+}
 
+if (get_category_val == "category: use of force") {
+	document.getElementById("useOfForce").checked = true;
+}
 
+if (get_category_val == "category: human trafficking") {
+	document.getElementById("humanTrafficking").checked = true;
+}
 
-var darHTML = '<div class="content">' +
-                        '<h3> <strong>DAR</strong></h3>' +
-                        '<br>'+
-                        '<p> The DAR Reporting System is designed to collect participant-level data for treatment court and diversion programs in the State of Wisconsin. The data can be utilized for performance measurement, evaluation, and tracking of participant progress through various programs. This is a secure site intended for authorized users at the state and local level.</p>' +
-                        '<p>The DAR also serves as the Statistical Analysis Center (SAC) for the State of Wisconsin and contributes directly to the ability of the Department of Justice to provide research results that aid in decision making for criminal justice programs and policies.  The BJIA provides additional program information, including data publications and UCR forms and manuals on the Department’s Law Enforcement website  <a href = "https://wilenet.org/html/justice-programs/programs/justice-stats/index.htm/" target="_blank">wilenet.org</a>.' +
-                    '</div>';
+if (get_category_val == "category: treatment and diversion") {
+	document.getElementById("treatmentAndDiversion").checked = true;
+}
 
-var ofrHTML = '<div class="content">' +
-                        '<h3> <strong>Overdose Fatality Review (OFR)</strong></h3>' +
-                        '<br>'+
-                        '<p> The OFR Reporting System is designed to collect participant-level data for treatment court and diversion programs in the State of Wisconsin. The data can be utilized for performance measurement, evaluation, and tracking of participant progress through various programs. This is a secure site intended for authorized users at the state and local level.</p>' +
-                        '<p>The OFR also serves as the Statistical Analysis Center (SAC) for the State of Wisconsin and contributes directly to the ability of the Department of Justice to provide research results that aid in decision making for criminal justice programs and policies.  The BJIA provides additional program information, including data publications and UCR forms and manuals on the Department’s Law Enforcement website  <a href = "https://wilenet.org/html/justice-programs/programs/justice-stats/index.htm/" target="_blank">wilenet.org</a>.' +
-                    '</div>';
+if (get_category_val == "category: drug and overdose data") {
+	document.getElementById("drugAndOverdoseData").checked = true;
+}
 
-var sakiHTML = '<div class="content">' +
-                        '<h3> <strong>SAKI</strong></h3>' +
-                        '<br>'+
-                        '<p> The SAKI Reporting System is designed to collect participant-level data for treatment court and diversion programs in the State of Wisconsin. The data can be utilized for performance measurement, evaluation, and tracking of participant progress through various programs. This is a secure site intended for authorized users at the state and local level.</p>' +
-                        '<p>The SAKI also serves as the Statistical Analysis Center (SAC) for the State of Wisconsin and contributes directly to the ability of the Department of Justice to provide research results that aid in decision making for criminal justice programs and policies.  The BJIA provides additional program information, including data publications and UCR forms and manuals on the Department’s Law Enforcement website  <a href = "https://wilenet.org/html/justice-programs/programs/justice-stats/index.htm/" target="_blank">wilenet.org</a>.' +
-                    '</div>';
+if (get_category_val == "category: federal crime data") {
+	document.getElementById("federalCrimeData").checked = true;
+}
 
 
-var tadHTML = '<div class="content">' +
-                        '<h3> <strong>Treatment and Diversion (TAD)</strong></h3>' +
-                        '<br>'+
-                        '<p> The TAD Reporting System is designed to collect participant-level data for treatment court and diversion programs in the State of Wisconsin. The data can be utilized for performance measurement, evaluation, and tracking of participant progress through various programs. This is a secure site intended for authorized users at the state and local level.</p>' +
-                        '<p>The TAD also serves as the Statistical Analysis Center (SAC) for the State of Wisconsin and contributes directly to the ability of the Department of Justice to provide research results that aid in decision making for criminal justice programs and policies.  The BJIA provides additional program information, including data publications and UCR forms and manuals on the Department’s Law Enforcement website  <a href = "https://wilenet.org/html/justice-programs/programs/justice-stats/index.htm/" target="_blank">wilenet.org</a>.' +
-                    '</div>';
+//get value of dropdown based on user selection in homepage
+var get_format_val = $('#formatDropdown').val().toLowerCase()
+console.log(get_category_val)
 
+if (get_format_val == "format: dashboard") {
+	document.getElementById("dashboard").checked = true;
+}
 
+if (get_format_val == "format: report") {
+	document.getElementById("report").checked = true;
+}
 
-//Set event listeners for programs
+if (get_format_val == "format: data story") {
+	document.getElementById("dataStory").checked = true;
+}
 
-$(document).ready(function(){ 
-  $('#coreNav').on('click', function(e) {
-
-    // Prevent the page from reloading
-  
-	document.getElementById("programRow1").innerHTML = coreHTML;
-  });
-});
-
-$(document).ready(function(){ 
-  $('#darNav').on('click', function(e) {
-
-    // Prevent the page from reloading
-  
-	document.getElementById("programRow1").innerHTML = darHTML;
-  });
-});
-
-$(document).ready(function(){ 
-  $('#ofrNav').on('click', function(e) {
-
-    // Prevent the page from reloading
-  
-	document.getElementById("programRow1").innerHTML = ofrHTML;
-  });
-});
-
-
-$(document).ready(function(){ 
-  $('#sakiNav').on('click', function(e) {
-
-    // Prevent the page from reloading
-  
-	document.getElementById("programRow1").innerHTML = sakiHTML;
-  });
-});
-
-
-$(document).ready(function(){ 
-  $('#tadNav').on('click', function(e) {
-
-    // Prevent the page from reloading
-  
-	document.getElementById("programRow1").innerHTML = tadHTML;
-  });
-});
-
-
-
-//Set content for data
-
-var ucrArrestDataHTML = '<div class="tableauPlaceholder" id="viz1587396794613" style="position: relative">' +
-						'<noscript>' +
-						'<a href="https:&#47;&#47;www.doj.state.wi.us&#47;dles&#47;bjia&#47;ucr-arrest-data"><img alt="" src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;UC&#47;UCRArrests&#47;DataNotesReadMe&#47;1_rss.png" style="border: none" /></a>' +
-        				'<noscript>' +
-        				'<object class="tableauViz"  style="display:none;"><param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" /> <param name="embed_code_version" value="3" /> <param name="site_root" value=" " /><param name="name" value="UCRArrests&#47;DataNotesReadMe" /><param name="tabs" value="yes" /><param name="toolbar" value="yes" /><param name="static_image" value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;UC&#47;UCRArrests&#47;DataNotesReadMe&#47;1.png" /> <param name="animate_transition" value="yes" /><param name="display_static_image" value="yes" /><param name="display_spinner" value="yes" /><param name="display_overlay" value="yes" /><param name="display_count" value="yes" /></object>'+
-        				'</div> ' +
-        				'<script type="text/javascript">                    var divElement = document.getElementById("viz1587396794613");                    var vizElement = divElement.getElementsByTagName("object")[0];                    vizElement.style.width="1000px";vizElement.style.height="850px";                    var scriptElement = document.createElement("script");                    scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js;                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>'
-                        
+if (get_format_val == "format: data download") {
+	document.getElementById("dataDownload").checked = true;
+}
 
 
 
 
-var ucr = '<div class="tableauPlaceholder" id="viz1587396794613" style="position: relative"><noscript><a href="https:&#47;&#47;www.doj.state.wi.us&#47;dles&#47;bjia&#47;ucr-arrest-data"><img alt=" " src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;UC&#47;UCRArrests&#47;DataNotesReadMe&#47;1_rss.png" style="border: none" /></a></noscript><object class="tableauViz"  style="display:none;"><param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" /> <param name="embed_code_version" value="3" /> <param name="site_root" value="" /><param name="name" value="UCRArrests&#47;DataNotesReadMe" /><param name="tabs" value="yes" /><param name="toolbar" value="yes" /><param name="static_image" value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;UC&#47;UCRArrests&#47;DataNotesReadMe&#47;1.png" /> <param name="animate_transition" value="yes" /><param name="display_static_image" value="yes" /><param name="display_spinner" value="yes" /><param name="display_overlay" value="yes" /><param name="display_count" value="yes" /></object></div>                <script type="text/javascript">                    var divElement = document.getElementById("viz1587396794613");                    var vizElement = divElement.getElementsByTagName("object")[0];                    vizElement.style.width="1000px";vizElement.style.height="850px";                    var scriptElement = document.createElement("script");                    scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>'
+//Experiment with checkboxes
 
 
-
-var myvar = '<div class=\'tableauPlaceholder\' id=\'viz1587399162124\' style=\'position: relative\'><noscript><a href=\'https://www.doj.state.wi.us/dles/bjia/ucr-sex-offense-data\'><img alt=\' \' src=\'https://public.tableau.com/static/images/UC/UCRSexOffenseData-TabVersion/OffenseRates/1_rss.png\' style=\'border: none\' /></a></noscript><object class=\'tableauViz\'  style=\'display:none;\'><param name=\'host_url\' value=\'https%3A%2F%2Fpublic.tableau.com%2F\' /> <param name=\'embed_code_version\' value=\'3\' /> <param name=\'site_root\' value=\'\' /><param name=\'name\' value=\'UCRSexOffenseData-TabVersion/OffenseRates\' /><param name=\'tabs\' value=\'yes\' /><param name=\'toolbar\' value=\'yes\' /><param name=\'static_image\' value=\'https://public.tableau.com/static/images/UC/UCRSexOffenseData-TabVersion/OffenseRates/1.png\' /> <param name=\'animate_transition\' value=\'yes\' /><param name=\'display_static_image\' value=\'yes\' /><param name=\'display_spinner\' value=\'yes\' /><param name=\'display_overlay\' value=\'yes\' /><param name=\'display_count\' value=\'yes\' /></object></div>                <script type=\'text/javascript\'>                    var divElement = document.getElementById(\'viz1587399162124\');                    var vizElement = divElement.getElementsByTagName(\'object\')[0];                    vizElement.style.width=\'1000px\';vizElement.style.height=\'850px\';                    var scriptElement = document.createElement(\'script\');                    scriptElement.src = \'https://public.tableau.com/javascripts/api/viz_v1.js\';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>';
+$(':checkbox').change(function() {
 	
+	category_array = []
+	
+	$("input:checkbox[name=category]:checked").each(function(){
+    category_array.push($(this).val().toLowerCase());
+	
+	
+	});
 
+	format_array = []
+	
+	$("input:checkbox[name=format]:checked").each(function(){
+    format_array.push($(this).val().toLowerCase());
+	
+	
+	});
+	
+	console.log(format_array)
 
+console.log(category_array)
+        // do stuff here. It will fire on any checkbox change
+		 var checkboxCategory_arrest = $('#arrestData').val().toLowerCase()
+		  var checkboxCategory_useOfForce = $('#useOfForce').val().toLowerCase()
+		  var checkboxCategory_humanTrafficking = $('#humanTrafficking').val().toLowerCase()
+  console.log(checkboxCategory_arrest, checkboxCategory_useOfForce, checkboxCategory_humanTrafficking)
+   console.log("doobie")
+   
 
-
-/*
-
-$(document).ready(function(){ 
-  $('#ucrArrestData').on('click', function(e) {
-  	console.log("poopy")
-
-    // Prevent the page from reloading
+   
+   var table = $("#download-forms-table-tbody");
+  var trs = table.find('tr');
+  trs.hide();
+   
+    var filtered = trs.filter(function(index, elem) {
+    var tds_category = $(elem).find('td > div:nth-of-type(3)'); //get the category
+	var tds_format = $(elem).find('td > div:nth-of-type(4)'); //get the format
+	var all_tds = $(elem).find('td'); //get all td
+	//console.log(tds.text())
+	//console.log(tds_format.text())
+	//console.log(tds_category.text())
+	//console.log(tds.eq(1).innerHTML)
+	console.log(category_array,tds_category.text().trim().toLowerCase()) 
+    if (category_array.includes(tds_category.text().trim().toLowerCase())&& format_array.includes(tds_format.text().trim().toLowerCase()))  {
+      return true;
+    }
+	if (category_array.includes(tds_category.text().trim().toLowerCase())&& format_array.length==0)  {
+      return true;
+    }
+	if (format_array.includes(tds_format.text().trim().toLowerCase())&& category_array.length==0)  {
+      return true;
+    }
+	if (category_array.length == 0 && format_array.length == 0)  {
+      return true;
+    }
+    
+    return false;
+  })
   
-	document.getElementById("containerContent").innerHTML = myvar
-  });
-});
-*/
+   filtered.show();
+
+}); 
 
 
+
+})

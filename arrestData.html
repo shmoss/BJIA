@@ -21,6 +21,8 @@
   
   <!-- Fonts-->
   <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  	<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Radio+Canada:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <!-- Favicon-->
   
   <title>BJIA Programs</title>
@@ -34,72 +36,55 @@
   
 <body>
 
+	<!-- Navigation -->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
+      <a class="navbar-brand" href="#">
+         <div class="logo_subheader">
+         Wisconsin Department of Justice 
+         <br>
+        </div>
+        <div class="logo_header">
+         
+         <br>
+        </div>
+      </a>
+      <button id="toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="collapse navbar-collapse text-left" id="navbarNav">
+          <ul id = "navPills" class=" nav-pills navbar-nav ml-auto">    
+              <li>
+                <a href="index.html" id="aboutPill" class="btn btn-s-md btn-white m-b">COVID-19
+                </a>
+              </li>
+              <li>
+                <a href="people.html" id="aboutPill" class="btn btn-s-md btn-white m-b">
+                  About DOJ
+                </a>
+              </li>
+              <li>
+                <a href="research.html" id="aboutPill" class="btn btn-s-md btn-white m-b active">DOJ News
+                </a>
+              </li>
+              <li>
+                <a href="publications.html" id="aboutPill" class="btn btn-s-md btn-white m-b">Contact Us
+                </a>
+              </li>
+              <li>
+                 <a href="media.html" id="aboutPill" class="btn btn-s-md btn-white m-b">
+                Employment
+                </a>
+              </li>
+             
+              
+          </ul> 
+
+    </nav>
+
   <div class="page-container">
 
-    <nav class="navbar">
-        
-          <div class="container-fluid" width='300px' >
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span> 
-                </button>
-                
-            </div>
-            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
-               <a href="index.html" class="fa-links">
-              <div class="thumbnail tile tile-medium tile-green" id="testTile" >
-                   
-                    <h1 class="tileHeading" id="linkHome">HOME</h1>
-                    <i class="fas fa-home fa-lg"></i>
-                   
-                    </div>
-                     </a>
-                <a href="about.html" class="fa-links">     
-                <div class="thumbnail tile tile-medium tile-green">
-                    
-                    <h1 class="tileHeading">ABOUT</h1>
-                    <i class="fas fa-info-circle fa-lg"></i>
-                    
-                    </div>
-                </a>    
-                <a href="programs.html" class="fa-links">
-                <div class="thumbnail tile tile-medium tile-green">
-                    
-                    <h1 class="tileHeading">PROGRAMS</h1>
-                    <i class="fas fa-sitemap fa-lg"></i>
-                  
-                    </div>
-                  </a>
-                 <a href="data.html" class="fa-links">
-                <div class="thumbnail tile tile-medium tile-green">
-                   
-                    <h1 class="tileHeading"style='color:#05E9FF'>DATA</h1>
-                    <i class="fas fa-database fa-lg"style='color:#05E9FF'></i>
-                   
-                    </div>
-                   </a>
-        </div>
-          </div>
-      </nav>
 
-      <div class='container'>
-        <div class='col-md-12'>
-          <h1 class="page-header">
-            <a class = "navbar-image" href = "BJIA.html">
-          <img src = "img/BJIA.jpeg" alt="BJIA-image" class="bjia-image" style='vertical-align:center;width:80px;height:auto;'>
-        </a>
-        <div class ='text' style="display:inline-block">
-          <p> <strong> Bureau of Justice</strong>
-          <br>
-          <strong> Information and Analysis</strong>
-        </p>
-          </div>
-          </h1>
-        
-        </div>
-  </div>
+	
   
 
 <!--
@@ -120,273 +105,73 @@
   </div>
 -->
 
-<div class="container"style='transform:scale(1);margin-top:-30px'>
-  <div class='col-md-12'>
-
-   
-    <div class="bs-example">
-      <div class="row">
-        <div class="col-sm-4 col-md-3"style='margin-top:-30px'>
-            <div class="iconWrapper"style=''>
-      <div class="thumbnail tile tile-medium tile-purple col-md-3 data" id='crimeIconActive'>
-                    <a href="arrestData.html" class="fa-links">
-                    
-                    <div class='gun-icon-container'>
-                   <svg style='transform:scale(.25)' version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="200.000000pt" height="200.000000pt" viewBox="0 0 200.000000 200.000000"
- preserveAspectRatio="xMidYMid meet">
-
-<g transform="translate(0.000000,200.000000) scale(0.100000,-0.100000)"
-fill="#2a4f6c" fill-opacity="1" stroke="none">
-<path d="M360 1776 c-175 -50 -299 -176 -345 -353 -60 -232 74 -480 307 -567
-l62 -24 19 -68 c10 -38 20 -74 22 -81 3 -8 24 -6 77 8 40 10 74 19 74 19 1 0
-7 -21 14 -47 19 -71 35 -93 70 -93 31 0 37 -12 38 -73 0 -15 10 -48 23 -75 21
--42 28 -48 63 -52 41 -5 51 -16 61 -63 4 -21 17 -33 48 -47 45 -21 112 -26
-122 -10 13 20 66 11 87 -16 16 -20 28 -24 57 -22 31 3 41 10 69 53 27 40 32
-56 27 80 -9 41 -9 84 -1 92 4 4 45 -12 92 -35 47 -23 88 -40 92 -38 4 2 22 35
-41 73 l33 69 75 12 c178 28 316 142 383 317 33 86 34 224 1 318 -112 327 -531
-429 -782 190 -91 -86 -131 -165 -150 -291 -13 -91 3 -181 50 -274 l38 -77 -38
--68 c-21 -37 -39 -70 -39 -73 0 -4 36 -24 80 -45 50 -25 80 -45 79 -55 -1 -29
--15 -51 -39 -63 -14 -7 -36 -29 -49 -50 -30 -46 -75 -52 -93 -12 -13 28 -99
-65 -144 62 -26 -2 -29 1 -35 44 -9 62 -34 108 -67 121 -55 21 -57 23 -54 64 2
-22 -3 59 -11 81 l-14 41 68 18 c79 20 78 18 50 119 l-19 69 43 49 c77 85 114
-186 115 312 0 217 -136 396 -349 459 -64 19 -187 20 -251 2z m235 -210 c188
--87 224 -329 70 -464 -58 -51 -136 -77 -206 -69 -152 18 -252 126 -253 272 -1
-86 34 166 96 219 80 68 200 86 293 42z m1037 -318 c54 -23 119 -89 144 -145
-22 -50 22 -165 0 -216 -9 -20 -33 -56 -53 -78 -137 -152 -379 -113 -464 75
--23 51 -25 162 -4 213 64 152 225 216 377 151z m-1012 -298 c6 -11 8 -31 4
--45 -4 -16 0 -34 10 -50 17 -26 15 -29 -26 -39 -26 -6 -28 -4 -28 24 0 17 -9
-44 -21 59 -17 23 -19 32 -10 50 15 27 57 28 71 1z m58 -237 c5 -10 12 -30 16
--45 5 -22 3 -25 -14 -21 -18 5 -25 -5 -21 -29 0 -5 -3 -8 -8 -8 -12 0 -35 96
--26 110 10 16 43 12 53 -7z m686 -49 c22 -21 20 -31 -8 -57 -14 -13 -28 -35
--31 -50 -8 -30 -21 -33 -49 -12 -19 15 -19 15 3 39 15 16 21 31 17 44 -7 22
-16 52 39 52 7 0 21 -7 29 -16z m-565 -167 c23 -61 23 -67 3 -67 -11 0 -22 -6
--25 -12 -6 -17 -13 -9 -32 36 -9 21 -11 35 -5 31 16 -10 40 14 33 32 -4 11 -3
-14 6 9 7 -5 16 -18 20 -29z m170 -159 c18 -6 21 -11 12 -22 -6 -7 -8 -21 -5
--31 6 -14 3 -16 -17 -10 -34 10 -57 24 -41 25 18 0 15 31 -5 47 -16 13 -16 13
-7 7 14 -4 36 -11 49 -16z m225 -18 c6 0 18 6 25 13 11 10 11 8 1 -13 -34 -66
--75 -105 -63 -59 3 12 0 24 -7 29 -9 6 -8 15 6 41 17 31 19 32 22 12 2 -13 9
--23 16 -23z"/>
-</g>
-</svg>
-                 </div>
-                    </a>
-            <div class="captionDataPage" id='crimeCaptionActive' >
-                 <div style='font-weight:900;'>Crime</div>
-                </div>
-          </div>
-          </div>
-    </div>
-        
-    <div class="col-sm-4 col-md-3"style='margin-top:-30px'>
-      <div class="thumbnail tile tile-medium tile-purple col-md-3 data">
-                    <a href="#" class="fa-links">
-                   
-                    <div class='gun-icon-container'>
-                   <svg style="transform:scale(.3)" version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="200.000000pt" height="200.000000pt" viewBox="0 0 200.000000 200.000000"
- preserveAspectRatio="xMidYMid meet">
-
-<g transform="translate(0.000000,200.000000) scale(0.100000,-0.100000)"
-fill="#2a4f6c" stroke="none">
-<path d="M940 1460 c-80 -38 -149 -71 -155 -73 -13 -5 11 -81 30 -97 13 -11
-42 -1 176 61 89 40 164 79 166 87 3 7 -2 31 -12 53 -13 28 -24 39 -39 38 -12
-0 -86 -32 -166 -69z"/>
-<path d="M1015 1319 c-60 -28 -113 -54 -117 -58 -4 -3 12 -47 35 -96 24 -50
-49 -105 56 -122 8 -18 17 -33 21 -33 18 0 241 111 238 119 -17 46 -112 241
--117 241 -3 -1 -55 -24 -116 -51z"/>
-<path d="M795 1141 c-34 -16 -169 -72 -300 -126 -237 -96 -278 -118 -288 -156
--7 -27 29 -69 60 -69 22 0 429 162 618 245 l55 25 -27 55 c-16 32 -33 55 -43
-54 -8 0 -42 -13 -75 -28z"/>
-<path d="M1148 1027 c-86 -40 -160 -75 -164 -79 -9 -10 24 -95 39 -101 7 -2
-85 29 175 71 135 62 162 78 162 96 0 23 -35 86 -47 86 -5 -1 -79 -33 -165 -73z"/>
-<path d="M747 712 c-10 -10 -17 -33 -17 -50 l0 -32 465 0 465 0 0 28 c0 15 -7
-38 -16 50 l-15 22 -433 0 c-407 0 -434 -1 -449 -18z"/>
-<path d="M607 572 c-21 -23 -22 -66 -1 -86 14 -14 81 -16 589 -16 l575 0 15
-24 c19 29 11 72 -15 86 -12 6 -236 10 -583 10 -534 0 -565 -1 -580 -18z"/>
-</g>
-</svg>
-                 </div>
-                    </a>
-                  <div class="captionDataPage">
-                  Treatment and Diversion
-                </div>
-          </div>
-        </div>
-    <div class="col-sm-4 col-md-3"style='margin-top:-30px'>
-      <div class="thumbnail tile tile-medium tile-purple col-md-3 data">
-                    <a href="#" class="fa-links">
-                   
-                    <div class='gun-icon-container'>
-                   <svg style="transform:scale(.21)" version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="200.000000pt" height="200.000000pt" viewBox="0 0 200.000000 200.000000"
- preserveAspectRatio="xMidYMid meet">
-
-<g transform="translate(0.000000,200.000000) scale(0.100000,-0.100000)"
-fill="#2a4f6c" stroke="none">
-<path d="M880 1721 c-219 -72 -617 -269 -697 -347 -51 -49 -53 -52 -53 -106 0
--63 23 -102 103 -176 26 -23 47 -50 47 -60 0 -28 11 -38 79 -72 152 -76 354
--138 526 -161 215 -28 487 25 757 149 82 38 115 67 105 95 -2 6 15 26 38 44
-53 40 101 112 110 162 9 54 -14 103 -66 141 -130 94 -523 281 -713 339 -89 27
--133 26 -236 -8z m219 -216 c16 -3 39 -1 51 5 26 14 36 8 60 -39 19 -38 19
--39 0 -56 -24 -22 -25 -54 -4 -136 24 -93 13 -144 -41 -194 -23 -22 -67 -57
--98 -78 l-55 -38 -63 45 c-105 73 -132 106 -137 170 -3 35 2 79 13 121 l18 66
--23 31 -23 31 24 44 c17 32 28 41 39 36 33 -16 88 -7 122 19 l33 26 27 -23
-c15 -13 41 -26 57 -30z"/>
-<path d="M304 866 c-3 -8 -4 -20 -3 -27 2 -8 -9 -32 -23 -54 -35 -52 -53 -121
--44 -168 9 -48 48 -92 138 -154 197 -136 438 -217 643 -216 123 1 206 16 340
-64 218 77 421 215 440 299 11 50 -3 113 -37 166 -18 27 -31 59 -29 72 4 37
--21 35 -121 -13 -415 -197 -767 -197 -1187 1 -104 49 -109 50 -117 30z"/>
-</g>
-</svg>
-                 </div>
-                    </a>
-                  <div class="captionDataPage">
-                  Law Enforcement
-                </div>
-          </div>
-        </div>
-    <div class="col-sm-4 col-md-3"style='margin-top:-30px'>
-      <div class="thumbnail tile tile-medium tile-purple col-md-3 data" >
-                    <a href="arrestData.html" class="fa-links">
-                    
-                    <div class='gun-icon-container'>
-                   <svg style='transform:scale(.18)' version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="200.000000pt" height="200.000000pt" viewBox="0 0 200.000000 200.000000"
- preserveAspectRatio="xMidYMid meet">
-
-<g transform="translate(0.000000,200.000000) scale(0.100000,-0.100000)"
-fill="#2a4f6c" stroke="none">
-<path d="M235 1895 c-24 -23 -25 -30 -25 -148 0 -82 4 -127 12 -135 9 -9 136
--12 509 -12 450 0 498 2 510 17 10 12 14 49 14 135 0 119 0 120 -28 144 l-28
-24 -470 0 -470 0 -24 -25z"/>
-<path d="M321 1525 c-15 -56 -47 -91 -108 -120 -110 -51 -142 -103 -143 -227
-l0 -78 666 0 667 0 -6 78 c-3 43 -10 90 -16 104 -17 46 -68 93 -135 127 -70
-35 -106 77 -106 125 l0 26 -405 0 -404 0 -10 -35z"/>
-<path d="M70 710 l0 -350 489 0 489 0 7 37 c13 71 48 119 196 268 l149 151 0
-122 0 122 -665 0 -665 0 0 -350z m700 134 l0 -66 57 32 57 32 18 -22 c27 -33
-23 -43 -32 -75 -27 -16 -50 -32 -50 -36 0 -4 23 -20 50 -35 55 -30 59 -40 32
--74 l-18 -22 -57 32 -57 32 0 -71 0 -71 -40 0 -39 0 -3 70 -3 70 -56 -34 -56
--33 -18 33 c-10 19 -16 36 -14 38 2 2 28 17 58 34 l54 30 -49 31 c-27 17 -53
-32 -58 34 -9 3 20 67 31 67 3 0 30 -14 59 -31 l54 -30 0 65 0 66 40 0 40 0 0
--66z"/>
-<path d="M1560 909 c-44 -20 -220 -183 -220 -204 0 -14 352 -365 366 -365 17
-0 180 172 200 211 9 19 19 65 22 104 4 58 0 80 -18 123 -24 56 -83 116 -136
-138 -50 21 -160 18 -214 -7z"/>
-<path d="M1207 580 c-83 -86 -99 -108 -113 -157 -38 -130 18 -263 133 -319 21
--10 68 -20 106 -22 94 -6 146 22 262 138 l90 90 -185 185 c-102 102 -188 185
--191 185 -4 0 -50 -45 -102 -100z"/>
-<path d="M70 250 c0 -83 17 -122 63 -150 31 -19 54 -20 546 -20 l513 0 -56 61
-c-44 47 -60 73 -73 120 l-16 59 -489 0 -488 0 0 -70z"/>
-</g>
-</svg>
-                 </div>
-                    </a>
-            <div class="captionDataPage" >
-                Drugs
-                </div>
-          </div>
-          
-    </div>
-    
-
-    </div><!-- /.bs-example -->
-</div>
-           
-  </div>
-</div>
 
 
-
-
-<div class="container">
-<div class='col-md-8'>
-              
-
-           <div class="container">
-    <h3>
-                    <strong>Crime Data</strong>
-                  </h3>
-                  <br>
-  
-  <p>
-                Thank you for visiting the Uniform Crime Reporting (UCR) Arrest Data dashboard!  The dashboard provides a more dynamic and interactive way to access UCR data, in place of static tables or reports.  The dashboard may be supplemented by reports on specific topics and a statewide summary, but will become the primary way to view and download UCR data for Wisconsin.
-
+ <div class="container">
  
-
-The tabs at the top of the dashboard will take you to different views where you can query the data by geography, time period, crime type, and other factors.  Please visit the Read Me! (Data Notes) tab for more detail on the data sources and limitations.
-
- 
-
-The dashboards were developed and are maintained by the Bureau of Justice Information and Analysis (BJIA), of the WI Department of Justice. Data are refreshed regularly and new dashboards will be added over time, so come back soon!
-                </p>
-
-                <p>
-                If you need something other than what is available here, or if you have comments or questions about the dashboards or the UCR program, please email  <a href = "https://wilenet.org/html/justice-programs/programs/justice-stats/index.htm/" target="_blank">statsanalysis@doj.state.wi.us</a>.
-                </p>
-                <br>
-
-
-  <div class="dropdown">
-    <div class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">UCR Data
-    <span class="caret"></span></div>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="arrestData.html" id="ucrArrestData">UCR Arrest Data</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="arrestDemographics.html" id="ucrArrestDemographics">UCR Arrest Demographics</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="ucrOffense.html"id="ucrOffenseData">UCR Offense Data</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="ucrOffenseByAgency">UCR Offense Data by Agency</a></li>
-
-    </ul>
-  </div>
-
-
-  <div class="dropdown">
-    <div class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Domestic Abuse Data
-  </div>
-  <div class="dropdown">
-    <div class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Other Data
-    <span class="caret"></span></div>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
-
-    </ul>
-  </div>
-
-</div>
-</div>    
-            
-
-       
-            </div>
-</div>
+	<div class="col-md-10" >
+		<div class="row">
+			<h1 class="mb-3">Wisconsin Department of Justice Data Portal</h1>
+		</div>
+		<div class="row">
+			<h3 class="mb-3"> Uniform Crime Reporting (UCR) Arrest Data</h3>
+		</div>
+		
+		<div class="row">
+			<p>
+			Thank you for visiting the Uniform Crime Reporting (UCR) Arrest Data dashboard!  The dashboard provides a more dynamic and interactive way to access UCR data, in place of static tables or reports.  The dashboard may be supplemented by reports on specific topics and a statewide summary, but will become the primary way to view and download UCR data for Wisconsin.
+			The tabs at the top of the dashboard will take you to different views where you can query the data by geography, time period, crime type, and other factors.  Please visit the Read Me! (Data Notes) tab for more detail on the data sources and limitations.
+			The dashboards were developed and are maintained by the Bureau of Justice Information and Analysis (BJIA), of the WI Department of Justice. Data are refreshed regularly and new dashboards will be added over time, so come back soon!
+            </p>
+            <p>
+            If you need something other than what is available here, or if you have comments or questions about the dashboards or the UCR program, please email  <a href = "https://wilenet.org/html/justice-programs/programs/justice-stats/index.htm/" target="_blank">statsanalysis@doj.state.wi.us</a>.
+            </p>	
+		</div>  
+	  
+		<div class="row dashboards">
+        	<div class="dropdown dashboards">
+				<div class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">UCR Dashboards
+				<span class="caret"></span>
+				</div>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="arrestData.html">UCR Arrest Data</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="arrestDemographics.html">UCR Arrest Demographics</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="offenseData.html">UCR Offense Data</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="OffenseArrestByAgency.html">UCR Offense Data by Agency</a></li>
+				</ul>
+			</div>
+		</div>  
+		
+      </div>
+	  
+	 
 
 
+  <!-- <div class="dropdown"> -->
+    <!-- <div class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Domestic Abuse Data -->
+  <!-- </div> -->
+  <!-- <div class="dropdown"> -->
+    <!-- <div class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Other Data -->
+    <!-- <span class="caret"></span></div> -->
+    <!-- <ul class="dropdown-menu" role="menu" aria-labelledby="menu1"> -->
+      <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li> -->
+      <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li> -->
+      <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li> -->
 
-
-<div class='container' id ='dashboardTitle'>
-        <div class='programContainer'  >
-            
-            <div class='col-md-12' >
-              
-          
-
-          </div>
-            </div>
-
-                  
-        </div>
-
+    <!-- </ul> -->
+  <!-- </div> -->
+<!-- </div> -->
 
    <div class='container' id ='containerContent'>
         <div class='programContainer'  >
             
-            <div class='col-md-12' >
+            <div class='col-md-8' >
               
-              <div class='tableauPlaceholder' id='viz1587396794613' style='position: relative'><noscript><a href='https:&#47;&#47;www.doj.state.wi.us&#47;dles&#47;bjia&#47;ucr-arrest-data'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;UC&#47;UCRArrests&#47;DataNotesReadMe&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='UCRArrests&#47;DataNotesReadMe' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;UC&#47;UCRArrests&#47;DataNotesReadMe&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1587396794613');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='850px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-
-           
+<div class='tableauPlaceholder' id='viz1651760571625' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;UC&#47;UCRArrests&#47;ByLocation&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='UCRArrests&#47;ByLocation' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;UC&#47;UCRArrests&#47;ByLocation&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1651760571625');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='850px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            <div class="programRow">
+              
+              
+            </div>
 
           </div>
             </div>
@@ -394,7 +179,6 @@ The dashboards were developed and are maintained by the Bureau of Justice Inform
                   
         </div>
     
-
 
 
   <div class='container'>
