@@ -144,12 +144,12 @@ if (get_format_val == "format: report") {
 	document.getElementById("report").checked = true;
 }
 
-if (get_format_val == "format: infographic") {
-	document.getElementById("infographic").checked = true;
+if (get_format_val == "format: data story") {
+	document.getElementById("dataStory").checked = true;
 }
 
-if (get_format_val == "format: dataset") {
-	document.getElementById("dataset").checked = true;
+if (get_format_val == "format: data download") {
+	document.getElementById("dataDownload").checked = true;
 }
 
 
