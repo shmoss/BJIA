@@ -48,6 +48,10 @@ p {
 
 }
 
+.checkboxFilter {
+  padding-bottom: 15px
+}
+
 .mb-3 {
 
 color: #002C3F;
@@ -211,7 +215,7 @@ color: #002C3F;
 
 
 
-.row.formatCategories {
+.row.typeCategories {
 padding-left:50px !important;
 padding-right:50px !important;
 padding-top:40px
@@ -243,6 +247,7 @@ padding-top:40px
 .project-associated-data,
 .project-category,
 .project-format,
+.project-program,
 .project-timeframe,
 .project-update,
 .project-last-update {
@@ -291,7 +296,7 @@ padding-top:40px
 
 }
 
-.col-md-12.exploreByCategory {
+.col-md-12.exploreByTopic {
 	text-align:center;
 	color:white;
 	font-size:30px;
@@ -299,7 +304,7 @@ padding-top:40px
 	padding-top:20px
 }
 
-.col-md-12.exploreByFormat {
+.col-md-12.exploreByType {
 	text-align:center;
 	color:#2a4f6c;
 	font-size:30px;
@@ -337,7 +342,7 @@ body {
 
 }
 
-.col-md-12.categories{
+.col-md-12.topic{
 	padding-left:200px !important;
 	padding-right:200px !important;
 	background:#7193b7
@@ -933,17 +938,13 @@ label:before {
   /* border-color: teal; */
 /* } */
 
-.categoryCheckboxTitle {
+.categoryCheckboxTitle, .typeCheckboxTitle, .programCheckboxTitle  {
 	padding-bottom:10px;
 	padding-top:10px;
 	text-transform: uppercase;
 }
 
-.formatCheckboxTitle {
-	padding-bottom:10px;
-	padding-top:10px;
-	text-transform: uppercase;
-}
+
 
 .tileContainer{
     float:right;
@@ -1407,7 +1408,7 @@ transform: scale(.75)  ;
 
 }
 	
-	.col-md-12.categories {
+	.col-md-12.topic {
 		padding-left:10px !important;
 		padding-right:10px !important
 		
@@ -1417,7 +1418,7 @@ transform: scale(.75)  ;
 
 
 @media (max-width: 992px) {
-	.col-md-12.categories {
+	.col-md-12.topic {
 		padding-left:10px !important;
 		padding-right:10px !important
 		

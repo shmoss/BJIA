@@ -11,24 +11,26 @@ $(document).ready(function(){
 	//console.log(displayVal)
 	//const displayCategory = localStorage.getItem('categoryValue');
 	//console.log(displayCategory)
-    var category = $('#categoryDropdown').val().toLowerCase(),
-    format = $('#formatDropdown').val().toLowerCase();
+    var topic = $('#topicDropdown').val().toLowerCase();
+    console.log(topic);
+    type = $('#typeDropdown').val().toLowerCase();
+    console.log(type)
 
   var table = $("#download-forms-table-tbody");
   var trs = table.find('tr');
   trs.hide();
 
   var filtered = trs.filter(function(index, elem) {
-    var tds_category = $(elem).find('td > div:nth-of-type(3)'); //get the category
-	var tds_format = $(elem).find('td > div:nth-of-type(4)'); //get the format
+    var tds_topic = $(elem).find('td > div:nth-of-type(3)'); //get the category
+	var tds_type = $(elem).find('td > div:nth-of-type(4)'); //get the format
 	var all_tds = $(elem).find('td'); //get all td
 	//console.log(tds.text())
-	console.log(tds_format.text())
+	console.log(tds_type.text())
 	//console.log(tds.eq(1).innerHTML)
-    if (category !== "all" && tds_category.text().trim().toLowerCase() !== category) {
+    if (topic !== "all" && tds_topic.text().trim().toLowerCase() !== topic) {
       return false;
     }
-    if (format !== "all" && tds_format.text().trim().toLowerCase() !== format) {
+    if (type !== "all" && tds_type.text().trim().toLowerCase() !== type) {
       return false;
     }
 
@@ -61,7 +63,7 @@ var selection
 
 //console.log(selection)
 
-var categoryValue 
+var topicValue 
 
 //($('#categoryDropdown').val('Category: Drug and Overdose Data'))
 
@@ -71,24 +73,24 @@ var categoryValue
 
 $('.container').on("change", 'select', function() {
 
-  var category = $('#categoryDropdown').val().toLowerCase(),
-    format = $('#formatDropdown').val().toLowerCase();
+  var topic = $('#topicDropdown').val().toLowerCase();
+    type = $('#typeDropdown').val().toLowerCase();
 
   var table = $("#download-forms-table-tbody");
   var trs = table.find('tr');
   trs.hide();
 
   var filtered = trs.filter(function(index, elem) {
-    var tds_category = $(elem).find('td > div:nth-of-type(3)'); //get the category
-	var tds_format = $(elem).find('td > div:nth-of-type(4)'); //get the format
+    var tds_topic = $(elem).find('td > div:nth-of-type(3)'); //get the category
+	var tds_type = $(elem).find('td > div:nth-of-type(4)'); //get the format
 	var all_tds = $(elem).find('td'); //get all td
 	//console.log(tds.text())
-	console.log(tds_format.text())
+	console.log(tds_type.text())
 	//console.log(tds.eq(1).innerHTML)
-    if (category !== "all" && tds_category.text().trim().toLowerCase() !== category) {
+    if (topic !== "all" && tds_topic.text().trim().toLowerCase() !== topic) {
       return false;
     }
-    if (format !== "all" && tds_format.text().trim().toLowerCase() !== format) {
+    if (type !== "all" && tds_type.text().trim().toLowerCase() !== type) {
       return false;
     }
     return true;
@@ -104,53 +106,56 @@ $('.container').on("change", 'select', function() {
 
 
 //get value of dropdown based on user selection in homepage
-var get_category_val = $('#categoryDropdown').val().toLowerCase()
-console.log(get_category_val)
+var get_topic_val = $('#topicDropdown').val().toLowerCase()
+console.log(get_topic_val)
 
-if (get_category_val == "category: arrest data") {
+if (get_topic_val == "topic: arrest data") {
 	document.getElementById("arrestData").checked = true;
 }
 
-if (get_category_val == "category: use of force") {
+if (get_topic_val == "topic: use of force") {
 	document.getElementById("useOfForce").checked = true;
 }
 
-if (get_category_val == "category: human trafficking") {
+if (get_topic_val == "topic: human trafficking") {
 	document.getElementById("humanTrafficking").checked = true;
 }
 
-if (get_category_val == "category: treatment and diversion") {
+if (get_topic_val == "topic: treatment and diversion") {
 	document.getElementById("treatmentAndDiversion").checked = true;
 }
 
-if (get_category_val == "category: drug and overdose data") {
+if (get_topic_val == "topic: drug and overdose data") {
 	document.getElementById("drugAndOverdoseData").checked = true;
 }
 
-if (get_category_val == "category: federal crime data") {
+if (get_topic_val == "topic: federal crime data") {
 	document.getElementById("federalCrimeData").checked = true;
 }
 
 
 //get value of dropdown based on user selection in homepage
-var get_format_val = $('#formatDropdown').val().toLowerCase()
-console.log(get_category_val)
+var get_type_val = $('#typeDropdown').val().toLowerCase()
+console.log(get_type_val)
 
-if (get_format_val == "format: dashboard") {
+if (get_type_val == "content type: dashboard") {
 	document.getElementById("dashboard").checked = true;
 }
 
-if (get_format_val == "format: report") {
+if (get_type_val == "content type: report") {
 	document.getElementById("report").checked = true;
 }
 
-if (get_format_val == "format: infographic") {
+if (get_type_val == "content type: infographic") {
 	document.getElementById("infographic").checked = true;
 }
 
-if (get_format_val == "format: dataset") {
+if (get_type_val == "content type: dataset") {
 	document.getElementById("dataset").checked = true;
 }
+
+
+
 
 
 
@@ -160,30 +165,38 @@ if (get_format_val == "format: dataset") {
 
 $(':checkbox').change(function() {
 	
-	category_array = []
+	topic_array = []
 	
-	$("input:checkbox[name=category]:checked").each(function(){
-    category_array.push($(this).val().toLowerCase());
+	$("input:checkbox[name=topic]:checked").each(function(){
+    topic_array.push($(this).val().toLowerCase());
 	
 	
 	});
 
-	format_array = []
+	type_array = []
 	
-	$("input:checkbox[name=format]:checked").each(function(){
-    format_array.push($(this).val().toLowerCase());
+	$("input:checkbox[name=type]:checked").each(function(){
+    type_array.push($(this).val().toLowerCase());
+	
+	
+	});
+
+	program_array = []
+	
+	$("input:checkbox[name=program]:checked").each(function(){
+    program_array.push($(this).val().toLowerCase());
 	
 	
 	});
 	
-	console.log(format_array)
+	console.log(program_array)
 
-console.log(category_array)
+console.log(topic_array)
         // do stuff here. It will fire on any checkbox change
-		 var checkboxCategory_arrest = $('#arrestData').val().toLowerCase()
-		  var checkboxCategory_useOfForce = $('#useOfForce').val().toLowerCase()
-		  var checkboxCategory_humanTrafficking = $('#humanTrafficking').val().toLowerCase()
-  console.log(checkboxCategory_arrest, checkboxCategory_useOfForce, checkboxCategory_humanTrafficking)
+		 var checkboxTopic_arrest = $('#arrestData').val().toLowerCase()
+		  var checkboxTopic_useOfForce = $('#useOfForce').val().toLowerCase()
+		  var checkboxTopic_humanTrafficking = $('#humanTrafficking').val().toLowerCase()
+  console.log(checkboxTopic_arrest, checkboxTopic_useOfForce, checkboxTopic_humanTrafficking)
    console.log("doobie")
    
 
@@ -193,24 +206,24 @@ console.log(category_array)
   trs.hide();
    
     var filtered = trs.filter(function(index, elem) {
-    var tds_category = $(elem).find('td > div:nth-of-type(3)'); //get the category
-	var tds_format = $(elem).find('td > div:nth-of-type(4)'); //get the format
+    var tds_topic = $(elem).find('td > div:nth-of-type(3)'); //get the category
+	var tds_type = $(elem).find('td > div:nth-of-type(4)'); //get the format
 	var all_tds = $(elem).find('td'); //get all td
 	//console.log(tds.text())
 	//console.log(tds_format.text())
 	//console.log(tds_category.text())
 	//console.log(tds.eq(1).innerHTML)
-	console.log(category_array,tds_category.text().trim().toLowerCase()) 
-    if (category_array.includes(tds_category.text().trim().toLowerCase())&& format_array.includes(tds_format.text().trim().toLowerCase()))  {
+	console.log(topic_array,tds_topic.text().trim().toLowerCase()) 
+    if (topic_array.includes(tds_topic.text().trim().toLowerCase())&& type_array.includes(tds_type.text().trim().toLowerCase()))  {
       return true;
     }
-	if (category_array.includes(tds_category.text().trim().toLowerCase())&& format_array.length==0)  {
+	if (topic_array.includes(tds_topic.text().trim().toLowerCase())&& type_array.length==0)  {
       return true;
     }
-	if (format_array.includes(tds_format.text().trim().toLowerCase())&& category_array.length==0)  {
+	if (type_array.includes(tds_type.text().trim().toLowerCase())&& topic_array.length==0)  {
       return true;
     }
-	if (category_array.length == 0 && format_array.length == 0)  {
+	if (topic_array.length == 0 && type_array.length == 0)  {
       return true;
     }
     
